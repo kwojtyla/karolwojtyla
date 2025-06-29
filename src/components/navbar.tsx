@@ -42,8 +42,10 @@ export function Navbar() {
                 <Link
                   href={page.href}
                   className={`${
-                    actualRoute === page.href ? "bg-gray-200" : "bg-transparent"
-                  } text-sm px-3 py-2 rounded-lg hover:bg-gray-200 transition-all duration-300 dark:hover:bg-gray-800`}
+                    actualRoute === page.href
+                      ? "bg-secondary"
+                      : "bg-transparent"
+                  } text-sm px-3 py-2 rounded-lg hover:bg-secondary transition-all duration-300`}
                 >
                   {page.label}
                 </Link>
@@ -58,7 +60,7 @@ export function Navbar() {
               <Button
                 className={buttonVariants({
                   className:
-                    "rounded-lg font-normal max-w-40 bg-gray-200 focus:outline-none text-gray-400 min-w-40 justify-start hover:text-gray-400 hover:bg-gray-200 shadow-none dark:bg-gray-800",
+                    "rounded-lg font-normal max-w-40 bg-secondary focus:outline-none text-gray-400 min-w-40 justify-start hover:text-gray-400 hover:bg-secondary shadow-none",
                 })}
               >
                 <Search size={20} />
