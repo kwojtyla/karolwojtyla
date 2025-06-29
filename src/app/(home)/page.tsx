@@ -1,12 +1,15 @@
 import { Navbar } from "@/components/navbar";
+import { WidthWrapper } from "@/components/width-wrapper";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Navbar />
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        Home
+      <main>
+        <WidthWrapper className="flex flex-col justify-center items-center h-screen">
+          Home
+        </WidthWrapper>
       </main>
-    </div>
+    </>
   );
 }

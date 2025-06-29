@@ -13,14 +13,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { useTheme } from "next-themes";
 import { ThemeButton } from "./theme-button";
 import BrazilFlag from "../../public/icons/brazil-flag";
 import USFlag from "../../public/icons/us-flag";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export function Navbar() {
-  const theme = useTheme();
+  const actualRoute = usePathname();
+
+  console.log(actualRoute);
   return (
     <header className="bg-background supports-[backdrop-filter]:bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur">
       <div className="flex px-6 md:px-11 h-16 items-center justify-between">
@@ -39,7 +41,9 @@ export function Navbar() {
               <li key={page.label}>
                 <Link
                   href={page.href}
-                  className="text-sm px-3 py-2 rounded-lg hover:bg-gray-200 transition-all duration-300 dark:hover:bg-gray-800"
+                  className={`${
+                    actualRoute === page.href ? "bg-gray-200" : "bg-transparent"
+                  } text-sm px-3 py-2 rounded-lg hover:bg-gray-200 transition-all duration-300 dark:hover:bg-gray-800`}
                 >
                   {page.label}
                 </Link>

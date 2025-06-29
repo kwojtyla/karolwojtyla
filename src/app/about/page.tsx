@@ -1,9 +1,17 @@
+import Footer from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+import { WidthWrapper } from "@/components/width-wrapper";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        About
+    <>
+      <Navbar />
+      <main>
+        <WidthWrapper className="flex flex-col justify-center items-center h-screen">
+          About
+        </WidthWrapper>
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
