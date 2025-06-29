@@ -22,7 +22,6 @@ import { usePathname, useSearchParams } from "next/navigation";
 export function Navbar() {
   const actualRoute = usePathname();
 
-  console.log(actualRoute);
   return (
     <header className="bg-background supports-[backdrop-filter]:bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur">
       <div className="flex px-6 md:px-11 h-16 items-center justify-between">
@@ -35,7 +34,7 @@ export function Navbar() {
           <TooltipContent>Ir para a Home</TooltipContent>
         </Tooltip>
 
-        <nav className="absolute min-w-7xl right-1/2 hidden translate-x-1/2 md:block">
+        <nav className="absolute min-w-7xl right-1/2 hidden translate-x-1/2 lg:block">
           <ul className="flex gap-2.5">
             {PAGES.map((page) => (
               <li key={page.label}>

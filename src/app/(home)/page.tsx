@@ -14,8 +14,8 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <WidthWrapper className="flex flex-col p-8 justify-center md:p-0 md:h-[calc(100vh-65px)]">
-          <section className="flex max-w-5xl flex-col gap-5">
+        <WidthWrapper className="flex flex-col p-8 justify-center lg:p-0 lg:h-[calc(100vh-65px)]">
+          <section className="flex max-w-5xl flex-col gap-5 pl-2">
             <div className="space-y-2 text-base">
               <div className="relative size-20 border-2 border-gray-950 rounded-full">
                 <Image
