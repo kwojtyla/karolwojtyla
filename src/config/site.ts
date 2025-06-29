@@ -4,7 +4,7 @@ const createSiteConfig = () => {
     github: "https://github.com/kwojtyla",
     instagram: "https://www.instagram.com/karolwojtyla.dev",
     linkedin: "https://www.linkedin.com/in/karolwojtyla",
-    lattes: "https://medium.com/linkjr",
+    lattes: "http://lattes.cnpq.br/6351448948601591",
   };
 
   return {
