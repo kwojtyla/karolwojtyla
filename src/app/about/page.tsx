@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <WidthWrapper className="flex flex-col justify-center items-center h-screen">
+        <WidthWrapper className="flex h-screen flex-col items-center justify-center">
           About
         </WidthWrapper>
       </main>

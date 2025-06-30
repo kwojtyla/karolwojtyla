@@ -6,11 +6,11 @@ import { siteConfig } from "@/config/site";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col pt-12 gap-8 w-full bg-gray-100 border-t border-gray-300">
+    <footer className="flex w-full flex-col gap-8 border-t border-gray-300 bg-gray-100 pt-12">
       <div className="flex flex-col items-center gap-8">
         <LogoIcon size={32} />
         <nav>
-          <ul className="flex gap-4 md:gap-10 text-sm">
+          <ul className="flex gap-4 text-sm md:gap-10">
             {PAGES.map((page) => (
               <li key={page.label}>
                 <Link href={page.href}>{page.label}</Link>
@@ -18,13 +18,13 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
-        <div className="flex flex-col text-sm items-center">
+        <div className="flex flex-col items-center text-sm">
           <p>ⓒ 2025 Karol Wojtyla</p>
           <p>Feito com ☕ e muito ❤️</p>
         </div>
       </div>
-      <div className="flex gap-6 md:gap-16 items-center">
-        <div className="w-full h-14 bg-gray-300 rounded-tr-full" />
+      <div className="flex items-center gap-6 md:gap-16">
+        <div className="h-14 w-full rounded-tr-full bg-gray-300" />
         <div className="flex gap-3.5">
           <Link href={siteConfig.links.github}>
             <Github />
@@ -39,7 +39,7 @@ export default function Footer() {
             <Lattes size={24} />
           </Link>
         </div>
-        <div className="w-full h-14 bg-gray-300 rounded-tl-full" />
+        <div className="h-14 w-full rounded-tl-full bg-gray-300" />
       </div>
     </footer>
   );

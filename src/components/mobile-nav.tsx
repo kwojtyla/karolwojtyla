@@ -43,7 +43,7 @@ export function MobileNav() {
           </SheetHeader>
 
           <nav>
-            <ul className="flex flex-col items-center gap-6 text-md font-normal">
+            <ul className="text-md flex flex-col items-center gap-6 font-normal">
               {PAGES.map((page) => (
                 <li key={page.label}>
                   <Link href={page.href} onClick={() => setOpen(false)}>

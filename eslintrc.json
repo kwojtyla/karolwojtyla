@@ -11,9 +11,9 @@
       "error",
       {
         "trailingComma": "all",
-        "semi": false,
+        "semi": true,
         "tabWidth": 2,
-        "singleQuote": true,
+        "singleQuote": false,
         "printWidth": 80,
         "endOfLine": "auto",
         "arrowParens": "always",

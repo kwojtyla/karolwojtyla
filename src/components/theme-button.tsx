@@ -25,7 +25,7 @@ export function ThemeButton() {
 
   return (
     <Button
-      className="bg-transparent hover:bg-secondary shadow-none transition-all duration-300 text-gray-950 dark:text-gray-50"
+      className="hover:bg-secondary bg-transparent text-gray-950 shadow-none transition-all duration-300 dark:text-gray-50"
       onClick={handleThemeToggle}
     >
       {isLightTheme ? <Moon size={20} /> : <Sun size={20} />}

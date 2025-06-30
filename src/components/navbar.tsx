@@ -17,14 +17,14 @@ import { ThemeButton } from "./theme-button";
 import BrazilFlag from "../../public/icons/brazil-flag";
 import USFlag from "../../public/icons/us-flag";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export function Navbar() {
   const actualRoute = usePathname();
 
   return (
     <header className="bg-background supports-[backdrop-filter]:bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur">
-      <div className="flex px-6 md:px-11 h-16 items-center justify-between">
+      <div className="flex h-16 items-center justify-between px-6 md:px-11">
         <Tooltip>
           <TooltipTrigger asChild>
             <Link href="/">
@@ -34,7 +34,7 @@ export function Navbar() {
           <TooltipContent>Ir para a Home</TooltipContent>
         </Tooltip>
 
-        <nav className="absolute min-w-7xl right-1/2 hidden translate-x-1/2 lg:block">
+        <nav className="absolute right-1/2 hidden min-w-7xl translate-x-1/2 lg:block">
           <ul className="flex gap-2.5">
             {PAGES.map((page) => (
               <li key={page.label}>
@@ -44,7 +44,7 @@ export function Navbar() {
                     actualRoute === page.href
                       ? "bg-secondary"
                       : "bg-transparent"
-                  } text-sm px-3 py-2 rounded-lg hover:bg-secondary transition-all duration-300`}
+                  } hover:bg-secondary rounded-lg px-3 py-2 text-sm transition-all duration-300`}
                 >
                   {page.label}
                 </Link>
@@ -53,13 +53,13 @@ export function Navbar() {
           </ul>
         </nav>
 
-        <div className="hidden md:flex gap-2.5 items-center">
+        <div className="hidden items-center gap-2.5 md:flex">
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
                 className={buttonVariants({
                   className:
-                    "rounded-lg font-normal max-w-40 bg-secondary focus:outline-none text-gray-400 min-w-40 justify-start hover:text-gray-400 hover:bg-secondary shadow-none",
+                    "bg-secondary hover:bg-secondary max-w-40 min-w-40 justify-start rounded-lg font-normal text-gray-400 shadow-none hover:text-gray-400 focus:outline-none",
                 })}
               >
                 <Search size={20} />

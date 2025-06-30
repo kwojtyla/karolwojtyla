@@ -1,7 +1,7 @@
 "use client";
 import LastArticle from "@/components/last-article";
 import { Navbar } from "@/components/navbar";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { WidthWrapper } from "@/components/width-wrapper";
 import { Download, Github, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
@@ -19,10 +19,10 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <WidthWrapper className="flex flex-col p-8 justify-center lg:p-0 lg:h-[calc(100vh-65px)]">
+        <WidthWrapper className="flex flex-col justify-center p-8 lg:h-[calc(100vh-65px)] lg:p-0">
           <section className="flex max-w-5xl flex-col gap-5 pl-2">
             <div className="space-y-2 text-base">
-              <div className="relative size-20 border-2 border-primary rounded-full">
+              <div className="border-primary relative size-20 rounded-full border-2">
                 <Image
                   src="/images/perfil.jpg"
                   alt="Foto do Karol Wojtyla"
@@ -105,7 +105,7 @@ export default function Home() {
               et ipsa mollitia ab molestiae dolorum qui dolores totam.
             </p>
 
-            <div className="flex gap-2 items-center ">
+            <div className="flex items-center gap-2">
               <Button variant="default">Vamos nos conhecer!</Button>
               <Button variant="ghost">
                 <Download /> Baixar currículo

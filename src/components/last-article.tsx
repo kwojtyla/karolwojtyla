@@ -15,16 +15,16 @@ export default function LastArticle({ title, link }: LastArticleProps) {
   return (
     <Link
       href={link}
-      className={`flex w-fit py-1 px-3 rounded-full items-center gap-2 transition-all duration-300 ${
+      className={`flex w-fit items-center gap-2 rounded-full px-3 py-1 transition-all duration-300 ${
         !isHovered ? "bg-emerald-100" : "bg-emerald-200"
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
-        className={`py-1 px-2 rounded-full transition-all duration-300 ${
+        className={`rounded-full px-2 py-1 transition-all duration-300 ${
           !isHovered ? "bg-emerald-600" : "bg-emerald-700"
-        } text-white text-xs`}
+        } text-xs text-white`}
       >
         Último artigo
       </div>
