@@ -3,16 +3,9 @@ import LastArticle from "@/components/last-article";
 import { Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import { WidthWrapper } from "@/components/width-wrapper";
-import { Download, Github, Instagram, Linkedin } from "lucide-react";
+import { Download } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { Lattes } from "../../../public/icons";
-import { siteConfig } from "@/config/site";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import Social from "@/components/social";
 
 export default function Home() {
   return (
@@ -48,43 +41,7 @@ export default function Home() {
               link="/"
             />
 
-            <div className="flex gap-3.5">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link href={siteConfig.links.github} target="_blank">
-                    <Github className="transition-colors duration-200 hover:text-blue-500" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>Ver Github</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link href={siteConfig.links.linkedin} target="_blank">
-                    <Linkedin className="transition-colors duration-200 hover:text-blue-500" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>Ver LinkedIn</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link href={siteConfig.links.instagram} target="_blank">
-                    <Instagram className="transition-colors duration-200 hover:text-blue-500" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>Ver Instagram</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link href={siteConfig.links.lattes} target="_blank">
-                    <Lattes
-                      size={24}
-                      className="transition-colors duration-200 hover:text-blue-500"
-                    />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>Ver Lattes</TooltipContent>
-              </Tooltip>
-            </div>
+            <Social />
 
             <p className="text-gray-500 dark:text-gray-300">
               Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet
