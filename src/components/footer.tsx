@@ -23,9 +23,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex items-center gap-6 md:gap-16">
-        <div className="bg-accent h-14 w-full rounded-tr-full" />
+        <div className="bg-accent dark:bg-secondary h-14 w-full rounded-tr-full" />
         <Social />
-        <div className="bg-accent h-14 w-full rounded-tl-full" />
+        <div className="bg-accent dark:bg-secondary h-14 w-full rounded-tl-full" />
       </div>
     </footer>
   );
