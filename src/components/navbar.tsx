@@ -35,7 +35,7 @@ export function Navbar() {
         </Tooltip>
 
         <nav className="absolute right-1/2 hidden min-w-7xl translate-x-1/2 lg:block">
-          <ul className="flex gap-2.5">
+          <ul className="flex gap-2.5 pl-8">
             {PAGES.map((page) => (
               <li key={page.label}>
                 <Link

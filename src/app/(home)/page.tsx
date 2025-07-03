@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <WidthWrapper className="flex flex-col justify-center p-8 lg:h-[calc(100vh-65px)] lg:p-0">
+        <WidthWrapper className="flex flex-col justify-center p-4 lg:h-[calc(100vh-65px)] lg:p-0">
           <section className="flex max-w-5xl flex-col gap-5 pl-2">
             <div className="space-y-2 text-base">
               <div className="border-primary relative size-20 rounded-full border-2">

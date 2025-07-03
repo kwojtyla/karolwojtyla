@@ -13,7 +13,10 @@ export function PageWrapper({
 }: PageWrapperProps) {
   return (
     <article
-      className={cn("px-8 py-16 md:mx-auto md:max-w-7xl md:py-24", className)}
+      className={cn(
+        "px-4 py-16 md:mx-auto md:max-w-7xl md:px-8 md:py-24",
+        className,
+      )}
       {...props}
     >
       {children}
