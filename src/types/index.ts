@@ -31,3 +31,17 @@ export type Certification = {
   startYear: number;
   endYear?: number | string;
 };
+
+export type Paper = {
+  id: number;
+  category: "Artigo" | "Resumo Expandido";
+  title: string;
+  year: number;
+  event: string;
+  link: string;
+};
+
+export type Research = {
+  asAuthor: Paper[];
+  asCoauthor: Paper[];
+};

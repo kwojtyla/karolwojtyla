@@ -6,6 +6,9 @@ import {
   PagePresentation,
   PageWrapper,
 } from "@/components/page";
+import PaperItem from "./_components/paper-item";
+import { research } from "@/data/research";
+import LetsConnect from "@/components/lets-connect";
 
 export default function Home() {
   return (
@@ -37,6 +40,35 @@ export default function Home() {
               et ipsa mollitia ab molestiae dolorum qui dolores totam.
             </PagePresentation>
           </PageHeadline>
+          <section className="flex flex-col gap-3">
+            <h2 className="text-2xl font-bold">Publicações de minha autoria</h2>
+            {research.asAuthor.map((paper) => (
+              <PaperItem
+                key={paper.id}
+                title={paper.title}
+                category={paper.category}
+                year={paper.year}
+                event={paper.event}
+                link={paper.link}
+              />
+            ))}
+          </section>
+          <section className="flex flex-col gap-3">
+            <h2 className="text-2xl font-bold">
+              Publicações de minha co-autoria
+            </h2>
+            {research.asCoauthor.map((paper) => (
+              <PaperItem
+                key={paper.id}
+                title={paper.title}
+                category={paper.category}
+                year={paper.year}
+                event={paper.event}
+                link={paper.link}
+              />
+            ))}
+          </section>
+          <LetsConnect />
         </PageWrapper>
       </main>
       <Footer />
