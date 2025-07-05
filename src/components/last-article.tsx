@@ -5,11 +5,16 @@ import Link from "next/link";
 import { useState } from "react";
 
 interface LastArticleProps {
+  placeholder: string;
   title: string;
   link: string;
 }
 
-export default function LastArticle({ title, link }: LastArticleProps) {
+export default function LastArticle({
+  placeholder,
+  title,
+  link,
+}: LastArticleProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -26,7 +31,7 @@ export default function LastArticle({ title, link }: LastArticleProps) {
           !isHovered ? "bg-emerald-600" : "bg-emerald-700"
         } text-xs text-white`}
       >
-        Último artigo
+        {placeholder}
       </div>
       <span className="hidden text-xs text-gray-950 md:block">{title}</span>
       <span className="text-xs text-gray-950 md:hidden">Ler agora</span>

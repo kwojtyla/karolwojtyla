@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { Degree } from "@/types";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 type EducationItemProps = Pick<
@@ -21,6 +22,7 @@ export default function EducationItem({
   endYear,
   className,
 }: EducationItemProps) {
+  const t = useTranslations("Tooltips");
   return (
     <div className={cn("", className)}>
       <h5 className="text-base font-bold">{title}</h5>
@@ -34,7 +36,7 @@ export default function EducationItem({
             {institution.name}
           </Link>
         </TooltipTrigger>
-        <TooltipContent>Ir para o site da instituição</TooltipContent>
+        <TooltipContent>{t("education-item")}</TooltipContent>
       </Tooltip>
 
       <p className="text-sm text-gray-500 dark:text-gray-200">{`${startYear} - ${endYear}`}</p>

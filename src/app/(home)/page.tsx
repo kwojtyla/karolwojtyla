@@ -6,8 +6,11 @@ import { WidthWrapper } from "@/components/width-wrapper";
 import { Download } from "lucide-react";
 import Image from "next/image";
 import Social from "@/components/social";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("Home");
+
   return (
     <>
       <Navbar />
@@ -26,17 +29,17 @@ export default function Home() {
               <div>
                 <p className="font-bold">Karol Wojtyla</p>
                 <p className="font-normal text-gray-500 dark:text-gray-400">
-                  Engenheiro de Software
+                  {t("position")}
                 </p>
               </div>
             </div>
 
             <div className="text-2xl font-bold md:text-5xl md:leading-14">
-              Oi! Eu sou o Karol - Engenheiro de Software apaixonado por
-              transformar experiências digitais com tecnologia 💡
+              {t("title")}
             </div>
 
             <LastArticle
+              placeholder={t("article-placeholder")}
               title="Passive View: Simplificando a separação entre lógica e interface no desenvolvimento de interfaces"
               link="/"
             />
@@ -63,9 +66,9 @@ export default function Home() {
             </p>
 
             <div className="flex items-center gap-2">
-              <Button variant="default">Vamos nos conhecer!</Button>
+              <Button variant="default">{t("cta-button")}</Button>
               <Button variant="ghost">
-                <Download /> Baixar currículo
+                <Download /> {t("resume-button")}
               </Button>
             </div>
           </section>

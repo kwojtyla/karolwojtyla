@@ -9,23 +9,18 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { PAGES } from "@/config/pages";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { ThemeButton } from "./theme-button";
-import {
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectItem,
-} from "@/components/ui/select";
-import BrazilFlag from "../../public/icons/brazil-flag";
-import USFlag from "../../public/icons/us-flag";
+import { LanguageSwitcher } from "./language-switcher";
+import { useLocale } from "next-intl";
+import { getPages } from "@/config/pages";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const locale = useLocale();
+  const PAGES = getPages(locale);
 
   return (
     <div className="ml-auto block lg:hidden">
@@ -53,19 +48,7 @@ export function MobileNav() {
               ))}
               <div className="flex items-center gap-2.5">
                 <ThemeButton />
-                <Select defaultValue="pt-br">
-                  <SelectTrigger>
-                    <SelectValue placeholder="Theme" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="pt-br">
-                      <BrazilFlag size={24} />
-                    </SelectItem>
-                    <SelectItem value="en">
-                      <USFlag size={24} />
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
+                <LanguageSwitcher />
               </div>
             </ul>
           </nav>

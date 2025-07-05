@@ -3,8 +3,10 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { siteConfig } from "@/config/site";
 import { Github, Instagram, Linkedin } from "lucide-react";
 import { Lattes } from "../../public/icons";
+import { useTranslations } from "next-intl";
 
 export default function Social() {
+  const t = useTranslations("Tooltips");
   return (
     <div className="flex gap-3.5">
       <Tooltip>
@@ -13,7 +15,7 @@ export default function Social() {
             <Github className="transition-colors duration-200 hover:text-blue-500" />
           </Link>
         </TooltipTrigger>
-        <TooltipContent>Ver Github</TooltipContent>
+        <TooltipContent>{t("social.github")}</TooltipContent>
       </Tooltip>
       <Tooltip>
         <TooltipTrigger asChild>
@@ -21,7 +23,7 @@ export default function Social() {
             <Linkedin className="transition-colors duration-200 hover:text-blue-500" />
           </Link>
         </TooltipTrigger>
-        <TooltipContent>Ver LinkedIn</TooltipContent>
+        <TooltipContent>{t("social.linkedin")}</TooltipContent>
       </Tooltip>
       <Tooltip>
         <TooltipTrigger asChild>
@@ -29,7 +31,7 @@ export default function Social() {
             <Instagram className="transition-colors duration-200 hover:text-blue-500" />
           </Link>
         </TooltipTrigger>
-        <TooltipContent>Ver Instagram</TooltipContent>
+        <TooltipContent>{t("social.instagram")}</TooltipContent>
       </Tooltip>
       <Tooltip>
         <TooltipTrigger asChild>
@@ -40,7 +42,7 @@ export default function Social() {
             />
           </Link>
         </TooltipTrigger>
-        <TooltipContent>Ver Lattes</TooltipContent>
+        <TooltipContent>{t("social.lattes")}</TooltipContent>
       </Tooltip>
     </div>
   );

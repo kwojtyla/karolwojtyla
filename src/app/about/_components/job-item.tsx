@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { Job } from "@/types";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 type JobItemProps = Pick<
@@ -29,6 +30,7 @@ export default function JobItem({
   endYear,
   className,
 }: JobItemProps) {
+  const t = useTranslations("Tooltips");
   return (
     <div className={cn("", className)}>
       <div className="flex items-center justify-between gap-4">
@@ -46,7 +48,7 @@ export default function JobItem({
               {company.name}
             </Link>
           </TooltipTrigger>
-          <TooltipContent>Ir para o site da empresa</TooltipContent>
+          <TooltipContent>{t("job-item")}</TooltipContent>
         </Tooltip>
         {" | "}
         <span className="text-sm text-gray-500 dark:text-gray-200">{type}</span>

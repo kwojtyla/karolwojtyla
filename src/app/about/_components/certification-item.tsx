@@ -6,6 +6,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Certification } from "@/types";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,6 +23,7 @@ export default function CertificationItem({
   startYear,
   endYear,
 }: CertificationItemProps) {
+  const t = useTranslations("Tooltips");
   return (
     <Tooltip>
       <TooltipTrigger asChild>
@@ -45,7 +47,7 @@ export default function CertificationItem({
           </div>
         </Link>
       </TooltipTrigger>
-      <TooltipContent>Ver credencial</TooltipContent>
+      <TooltipContent>{t("certification-item")}</TooltipContent>
     </Tooltip>
   );
 }

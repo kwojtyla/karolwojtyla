@@ -13,6 +13,7 @@ import Link from "next/link";
 import { CursorTooltip } from "@/components/ui/cursor-tooltip";
 import { useState } from "react";
 import { Paper } from "@/types";
+import { useTranslations } from "next-intl";
 
 type PaperItemProps = Pick<
   Paper,
@@ -27,6 +28,8 @@ export default function PaperItem({
   link,
 }: PaperItemProps) {
   const [hovered, setHovered] = useState(false);
+  const t = useTranslations("Tooltips");
+
   return (
     <Link href={link} target="_blank">
       <Card
@@ -34,7 +37,7 @@ export default function PaperItem({
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <CursorTooltip open={hovered} content="Ver na íntegra" />
+        <CursorTooltip open={hovered} content={t("paper-item")} />
         <div className="hidden h-fit w-fit p-3 md:block">
           <SquareArrowOutUpRight size={24} />
         </div>

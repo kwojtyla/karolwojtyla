@@ -1,0 +1,71 @@
+{
+  "Home": {
+    "position": "Software Engineer",
+    "title": "Hi! I'm Karol - Software Engineer passionate about transforming digital experiences with technology 💡",
+    "article-placeholder": "Last article",
+    "cta-button": "Let's get in touch!",
+    "resume-button": "Download resume"
+  },
+  "About": {
+    "headline": "Lorem ipsum dolor sit amet consectetur. Amet nisl lacus pharetra dolor tincidunt eget interdum pellentesque.",
+    "presentation": "Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet similique ut odio molestiae quo doloribus perferendis non eaque rerum! Ut iure assumenda At corrupti aspernatur nam ipsam esse est facilis nemo.\n\nUt fugiat accusamus ut enim tempore quo voluptate incidunt nam voluptate repudiandae quo dicta dignissimos ea repellat sapiente. Est eligendi dignissimos est quia laboriosam sed tempora neque vel numquam sunt qui iste quia!\n\nEa quibusdam accusamus et ratione adipisci qui cumque molestias et totam molestiae. Sit accusantium ipsum aut reprehenderit ipsam et labore beatae 33 alias expedita ab eveniet natus. Eum quas harum et ipsa mollitia ab molestiae dolorum qui dolores totam.",
+    "experiences-title": "Professional experiences",
+    "education-title": "Academic background",
+    "certifications-title": "Certifications"
+  },
+  "Research": {
+    "headline": "Lorem ipsum dolor sit amet consectetur. Amet nisl lacus pharetra dolor tincidunt eget interdum pellentesque.",
+    "presentation": "Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet similique ut odio molestiae quo doloribus perferendis non eaque rerum! Ut iure assumenda At corrupti aspernatur nam ipsam esse est facilis nemo.\n\nUt fugiat accusamus ut enim tempore quo voluptate incidunt nam voluptate repudiandae quo dicta dignissimos ea repellat sapiente. Est eligendi dignissimos est quia laboriosam sed tempora neque vel numquam sunt qui iste quia!\n\nEa quibusdam accusamus et ratione adipisci qui cumque molestias et totam molestiae. Sit accusantium ipsum aut reprehenderit ipsam et labore beatae 33 alias expedita ab eveniet natus. Eum quas harum et ipsa mollitia ab molestiae dolorum qui dolores totam.",
+    "authored-title": "Authored Publications",
+    "coauthored-title": "Co-authored Publications"
+  },
+  "Contact": {
+    "headline": "Let's talk!",
+    "presentation": "Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet similique ut odio molestiae quo doloribus perferendis non eaque rerum! Ut iure assumenda At corrupti aspernatur nam ipsam esse est facilis nemo.",
+    "email-title": "Send me an email",
+    "social-title": "Contact me through social media",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Your e-mail"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message here"
+      },
+      "button": "Submit"
+    }
+  },
+  "LetsConnect": {
+    "title": "Let's connect!",
+    "description": "If you'd like to talk about development, technology, consulting, or product building, feel free to reach out on <linkedin>LinkedIn</linkedin> or send an email to <email>contact@karolwojtyla.dev</email>.",
+    "emailButton": "Send me an email",
+    "dmButton": "Send me a DM"
+  },
+  "Tooltips": {
+    "job-item": "Go to company website",
+    "education-item": "Go to the institution's website",
+    "certification-item": "See credential",
+    "paper-item": "Read full article",
+    "social": {
+      "linkedin": "Open LinkedIn",
+      "instagram": "Open Instagram",
+      "github": "Open GitHub",
+      "lattes": "Open Lattes"
+    },
+    "navbar": {
+      "home": "Go to Home",
+      "search": "Search the site",
+      "theme": "Switch theme",
+      "language": "Switch language"
+    }
+  },
+  "Footer": {
+    "made": "Made with ☕ and so much ❤️"
+  }
+}
+

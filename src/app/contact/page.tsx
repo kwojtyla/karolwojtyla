@@ -32,9 +32,11 @@ import { useState } from "react";
 import { LoadingSpinner } from "@/components/spinner";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
+  const t = useTranslations("Contact");
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -85,17 +87,12 @@ export default function Contact() {
       <main>
         <PageWrapper className="flex flex-col gap-8">
           <PageHeadline>
-            <PageHeader>Vamos conversar!</PageHeader>
-            <PagePresentation>
-              Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet
-              similique ut odio molestiae quo doloribus perferendis non eaque
-              <span className="text-primary"> rerum</span>! Ut iure assumenda At
-              corrupti aspernatur nam ipsam esse est facilis nemo.
-            </PagePresentation>
+            <PageHeader>{t("headline")}</PageHeader>
+            <PagePresentation>{t("presentation")}</PagePresentation>
           </PageHeadline>
           <section className="flex w-full flex-col items-stretch justify-between gap-8 md:flex-row">
             <div className="flex w-full flex-col gap-3">
-              <h2 className="text-2xl font-bold">Me mande um e-mail</h2>
+              <h2 className="text-2xl font-bold">{t("email-title")}</h2>
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
@@ -106,10 +103,12 @@ export default function Contact() {
                     name="username"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-base">Nome</FormLabel>
+                        <FormLabel className="text-base">
+                          {t("form.name.label")}
+                        </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Seu nome"
+                            placeholder={t("form.name.placeholder")}
                             {...field}
                             required
                             disabled={loading}
@@ -124,10 +123,12 @@ export default function Contact() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-base">E-mail</FormLabel>
+                        <FormLabel className="text-base">
+                          {t("form.email.label")}
+                        </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Seu e-mail"
+                            placeholder={t("form.email.placeholder")}
                             {...field}
                             required
                             disabled={loading}
@@ -143,10 +144,12 @@ export default function Contact() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-base">Mensagem</FormLabel>
+                        <FormLabel className="text-base">
+                          {t("form.message.label")}
+                        </FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Escreva sua mensagem aqui"
+                            placeholder={t("form.message.placeholder")}
                             {...field}
                             required
                             disabled={loading}
@@ -157,14 +160,14 @@ export default function Contact() {
                     )}
                   />
                   <Button type="submit" disabled={loading}>
-                    {loading ? <LoadingSpinner /> : "Enviar"}
+                    {loading ? <LoadingSpinner /> : t("form.button")}
                   </Button>
                 </form>
               </Form>
             </div>
             <div className="flex h-px flex-1 border-t md:h-auto md:w-px md:border-l" />
             <div className="flex w-full flex-col gap-3">
-              <h2 className="text-2xl font-bold">Contate-me pelas redes</h2>
+              <h2 className="text-2xl font-bold">{t("social-title")}</h2>
               <Link
                 href={siteConfig.links.instagram}
                 className="flex w-fit items-center gap-2 rounded-lg border border-blue-500 bg-blue-50 px-3 py-1.5 text-xs leading-6 text-nowrap text-blue-500 transition-colors duration-200 hover:bg-blue-100 dark:border-blue-400 dark:bg-blue-950 dark:text-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-300"

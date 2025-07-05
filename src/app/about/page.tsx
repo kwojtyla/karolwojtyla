@@ -7,24 +7,27 @@ import {
   PageWrapper,
 } from "@/components/page";
 import JobItem from "./_components/job-item";
-import { experiences } from "@/data/experiences";
-import { education } from "@/data/education";
 import EducationItem from "./_components/education-item";
 import CertificationItem from "./_components/certification-item";
 import { certifications } from "@/data/certifications";
 import LetsConnect from "@/components/lets-connect";
+import { useLocale, useTranslations } from "next-intl";
+import { getExperiences } from "@/data/experience";
+import { getEducation } from "@/data/education";
 
 export default function About() {
+  const t = useTranslations("About");
+  const locale = useLocale();
+  const experiences = getExperiences(locale);
+  const education = getEducation(locale);
+
   return (
     <>
       <Navbar />
       <main>
         <PageWrapper className="flex flex-col gap-8">
           <PageHeadline>
-            <PageHeader>
-              Lorem ipsum dolor sit amet consectetur. Amet nisl lacus pharetra
-              dolor tincidunt eget interdum pellentesque.
-            </PageHeader>
+            <PageHeader>{t("headline")}</PageHeader>
             <PagePresentation>
               Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet
               similique ut odio molestiae quo doloribus perferendis non eaque
@@ -45,7 +48,7 @@ export default function About() {
             </PagePresentation>
           </PageHeadline>
           <section className="flex flex-col gap-3">
-            <h2 className="text-2xl font-bold">Experiências profissionais</h2>
+            <h2 className="text-2xl font-bold">{t("experiences-title")}</h2>
             <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:grid-rows-3 md:gap-x-10 md:gap-y-4">
               {experiences.map((experience) => (
                 <JobItem
@@ -62,7 +65,7 @@ export default function About() {
             </div>
           </section>
           <section className="flex flex-col gap-3">
-            <h2 className="text-2xl font-bold">Formação acadêmica</h2>
+            <h2 className="text-2xl font-bold">{t("education-title")}</h2>
             {education.map((item) => (
               <EducationItem
                 key={item.id}
@@ -74,7 +77,7 @@ export default function About() {
             ))}
           </section>
           <section className="flex flex-col gap-3">
-            <h2 className="text-2xl font-bold">Certificações</h2>
+            <h2 className="text-2xl font-bold">{t("certifications-title")}</h2>
             <div className="flex flex-col gap-3 md:flex-row md:gap-4">
               {certifications.map((certification) => (
                 <CertificationItem

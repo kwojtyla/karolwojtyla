@@ -85,7 +85,8 @@ export const research: Research = {
       title: "Monitoramento Inteligente de Água: Uma Abordagem com ESP32",
       category: "Artigo",
       year: 2023,
-      event: "II Semana Acadêmica de Informática do IFPA Campus Castanhal",
+      event:
+        "II Semana Acadêmica de Informática do IFPA Campus Castanhal (SEMAINF)",
       link: "/",
     },
   ],

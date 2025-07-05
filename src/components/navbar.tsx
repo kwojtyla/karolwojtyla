@@ -1,26 +1,22 @@
 "use client";
 
-import { PAGES } from "@/config/pages";
 import Link from "next/link";
 import { MobileNav } from "./mobile-nav";
 import { LogoIcon } from "../../public/icons";
 import { Button, buttonVariants } from "./ui/button";
 import { Search } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select";
 import { ThemeButton } from "./theme-button";
-import BrazilFlag from "../../public/icons/brazil-flag";
-import USFlag from "../../public/icons/us-flag";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { usePathname } from "next/navigation";
+import { LanguageSwitcher } from "./language-switcher";
+import { getPages } from "@/config/pages";
+import { useLocale, useTranslations } from "next-intl";
 
 export function Navbar() {
   const actualRoute = usePathname();
+  const locale = useLocale();
+  const PAGES = getPages(locale);
+  const t = useTranslations("Tooltips");
 
   return (
     <header className="bg-background supports-[backdrop-filter]:bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur">
@@ -31,7 +27,7 @@ export function Navbar() {
               <LogoIcon size={32} />
             </Link>
           </TooltipTrigger>
-          <TooltipContent>Ir para a Home</TooltipContent>
+          <TooltipContent>{t("navbar.home")}</TooltipContent>
         </Tooltip>
 
         <nav className="absolute right-1/2 hidden min-w-7xl translate-x-1/2 lg:block">
@@ -66,31 +62,23 @@ export function Navbar() {
                 Pesquisar
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Pesquisar no site</TooltipContent>
+            <TooltipContent>{t("navbar.search")}</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <ThemeButton />
+              <div role="button" tabIndex={0}>
+                <ThemeButton />
+              </div>
             </TooltipTrigger>
-            <TooltipContent>Mudar tema</TooltipContent>
+            <TooltipContent>{t("navbar.theme")}</TooltipContent>
           </Tooltip>
           <Tooltip>
-            <Select defaultValue="pt-br">
-              <TooltipTrigger asChild>
-                <SelectTrigger>
-                  <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-              </TooltipTrigger>
-              <SelectContent>
-                <SelectItem value="pt-br">
-                  <BrazilFlag size={24} />
-                </SelectItem>
-                <SelectItem value="en">
-                  <USFlag size={24} />
-                </SelectItem>
-              </SelectContent>
-            </Select>
-            <TooltipContent>Mudar idioma</TooltipContent>
+            <TooltipTrigger asChild>
+              <div role="button" tabIndex={0}>
+                <LanguageSwitcher />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent>{t("navbar.language")}</TooltipContent>
           </Tooltip>
         </div>
 

@@ -34,7 +34,7 @@ export type Certification = {
 
 export type Paper = {
   id: number;
-  category: "Artigo" | "Resumo Expandido";
+  category: "Artigo" | "Resumo Expandido" | "Article" | "Extended Summary";
   title: string;
   year: number;
   event: string;
