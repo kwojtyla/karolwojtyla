@@ -10,7 +10,7 @@ import PaperItem from "./_components/paper-item";
 import { research } from "@/data/research";
 import LetsConnect from "@/components/lets-connect";
 
-export default function Home() {
+export default function Research() {
   return (
     <>
       <Navbar />

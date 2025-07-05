@@ -14,7 +14,7 @@ import CertificationItem from "./_components/certification-item";
 import { certifications } from "@/data/certifications";
 import LetsConnect from "@/components/lets-connect";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Navbar />
