@@ -24,6 +24,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Karol Wojtyla" />
+      </head>
       <body className={`${plusJakartaSans.variable} antialiased`}>
         <Providers>
           <NextIntlClientProvider>{children}</NextIntlClientProvider>
