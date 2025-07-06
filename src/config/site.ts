@@ -8,7 +8,7 @@ const createSiteConfig = () => {
   };
 
   return {
-    name: "Karol Wojtyla | Engenheiro de Software",
+    name: "Karol Wojtyla | Software Engineer",
     description:
       "Engenheiro de Software especialista em transformar experiências digitais com tecnologia",
     ogImage: `${url}/og.jpg`,
