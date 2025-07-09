@@ -64,7 +64,7 @@ export default async function Projects() {
             </PagePresentation>
           </PageHeadline>
 
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <FeaturedProject
               key={project.name}
               name={project.name}
@@ -74,6 +74,7 @@ export default async function Projects() {
               cover={project.coverUrl}
               stack={project.stack}
               link={`projects/${project.slug.current}`}
+              reverse={index % 2 !== 0}
             />
           ))}
           <LetsConnect />

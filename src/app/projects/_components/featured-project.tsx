@@ -14,6 +14,7 @@ interface FeaturedProjectProps {
   stack: string;
   cover: string;
   link: string;
+  reverse?: boolean;
 }
 
 export function FeaturedProject({
@@ -24,11 +25,14 @@ export function FeaturedProject({
   stack,
   cover,
   link,
+  reverse = false,
 }: FeaturedProjectProps) {
   const stackList = parseStack(stack);
 
   return (
-    <div className="flex w-full items-center">
+    <div
+      className={`flex w-full items-center ${reverse && "flex-row-reverse"}`}
+    >
       <div className="relative h-96 w-1/2 rounded-lg">
         <Image
           src={cover}
@@ -37,7 +41,9 @@ export function FeaturedProject({
           fill
         />
       </div>
-      <div className="flex w-1/2 flex-col gap-3 pl-12 text-base text-gray-500 dark:text-gray-300">
+      <div
+        className={`flex w-1/2 flex-col gap-3 ${reverse ? "pr-12" : "pl-12"} text-base text-gray-500 dark:text-gray-300`}
+      >
         <h2 className="text-primary text-3xl font-bold">{name}</h2>
         <p>
           Feito na{" "}
