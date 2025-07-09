@@ -31,7 +31,12 @@ const InfoItem = ({ icon, label, value, href, tip }: InfoItemProps) => (
     <div>
       <p className="text-xs text-gray-500">{label}</p>
       {href ? (
-        <TipLink href={href} className="text-sm" tip={tip ? tip : ""}>
+        <TipLink
+          href={href}
+          target="_blank"
+          className="text-sm"
+          tip={tip ? tip : ""}
+        >
           {value}
         </TipLink>
       ) : (
