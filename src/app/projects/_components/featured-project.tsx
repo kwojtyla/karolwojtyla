@@ -44,7 +44,15 @@ export function FeaturedProject({
       <div
         className={`flex w-1/2 flex-col gap-3 ${reverse ? "pr-12" : "pl-12"} text-base text-gray-500 dark:text-gray-300`}
       >
-        <h2 className="text-primary text-3xl font-bold">{name}</h2>
+        <TipLink
+          href={`${link}`}
+          tip="Abrir página do projeto"
+          className="w-fit"
+        >
+          <h2 className="text-primary w-fit text-3xl font-bold transition-colors duration-200 hover:text-blue-500">
+            {name}
+          </h2>
+        </TipLink>
         <p>
           Feito na{" "}
           <TipLink
