@@ -5,7 +5,7 @@ import { Github, Instagram, Linkedin } from "lucide-react";
 import { Lattes } from "../../public/icons";
 import { useTranslations } from "next-intl";
 
-export default function Social() {
+export function Social() {
   const t = useTranslations("Tooltips");
   return (
     <div className="flex gap-3.5">

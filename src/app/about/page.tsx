@@ -10,7 +10,7 @@ import JobItem from "./_components/job-item";
 import EducationItem from "./_components/education-item";
 import CertificationItem from "./_components/certification-item";
 import { certifications } from "@/data/certifications";
-import LetsConnect from "@/components/lets-connect";
+import { LetsConnect } from "@/components/lets-connect";
 import { useLocale, useTranslations } from "next-intl";
 import { getExperiences } from "@/data/experience";
 import { getEducation } from "@/data/education";

@@ -7,7 +7,7 @@ import {
   PageWrapper,
 } from "@/components/page";
 import PaperItem from "./_components/paper-item";
-import LetsConnect from "@/components/lets-connect";
+import { LetsConnect } from "@/components/lets-connect";
 import { useLocale, useTranslations } from "next-intl";
 import { getResearch } from "@/data/research";
 

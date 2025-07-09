@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { WidthWrapper } from "@/components/width-wrapper";
 import { Download } from "lucide-react";
 import Image from "next/image";
-import Social from "@/components/social";
+import { Social } from "@/components/social";
 import { useTranslations } from "next-intl";
 
 export default function Home() {

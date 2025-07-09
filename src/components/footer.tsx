@@ -1,6 +1,6 @@
 import { LogoIcon } from "../../public/icons";
 import Link from "next/link";
-import Social from "./social";
+import { Social } from "./social";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { useLocale, useTranslations } from "next-intl";
 import { getPages } from "@/config/pages";

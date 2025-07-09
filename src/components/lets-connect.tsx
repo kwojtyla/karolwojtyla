@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Instagram, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-export default function LetsConnect() {
+export function LetsConnect() {
   const t = useTranslations("LetsConnect");
 
   return (
