@@ -1,14 +1,9 @@
 "use client";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { TipLink } from "@/components/tip-link";
 import { cn } from "@/lib/utils";
 import { Job } from "@/types";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 type JobItemProps = Pick<
   Job,
@@ -38,18 +33,15 @@ export default function JobItem({
         <p className="text-sm text-nowrap text-gray-500 dark:text-gray-200">{`${startYear} - ${endYear}`}</p>
       </div>
       <div>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href={`${company.link}`}
-              target="_blank"
-              className="text-sm font-medium text-gray-500 transition-colors duration-200 hover:text-blue-500 dark:text-gray-200"
-            >
-              {company.name}
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent>{t("job-item")}</TooltipContent>
-        </Tooltip>
+        <TipLink
+          href={`${company.link}`}
+          target="_blank"
+          tip={t("job-item")}
+          className="text-sm font-medium text-gray-500 transition-colors duration-200 hover:text-blue-500 dark:text-gray-200"
+        >
+          {company.name}
+        </TipLink>
+
         {" | "}
         <span className="text-sm text-gray-500 dark:text-gray-200">{type}</span>
       </div>

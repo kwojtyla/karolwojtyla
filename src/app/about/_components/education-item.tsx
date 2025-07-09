@@ -1,14 +1,9 @@
 "use client";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { TipLink } from "@/components/tip-link";
 import { cn } from "@/lib/utils";
 import { Degree } from "@/types";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 type EducationItemProps = Pick<
   Degree,
@@ -26,18 +21,15 @@ export default function EducationItem({
   return (
     <div className={cn("", className)}>
       <h5 className="text-base font-bold">{title}</h5>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Link
-            href={`${institution.link}`}
-            target="_blank"
-            className="text-sm font-medium text-gray-500 transition-colors duration-200 hover:text-blue-500 dark:text-gray-200"
-          >
-            {institution.name}
-          </Link>
-        </TooltipTrigger>
-        <TooltipContent>{t("education-item")}</TooltipContent>
-      </Tooltip>
+
+      <TipLink
+        href={`${institution.link}`}
+        target="_blank"
+        tip={t("education-item")}
+        className="text-sm font-medium text-gray-500 transition-colors duration-200 hover:text-blue-500 dark:text-gray-200"
+      >
+        {institution.name}
+      </TipLink>
 
       <p className="text-sm text-gray-500 dark:text-gray-200">{`${startYear} - ${endYear}`}</p>
     </div>
