@@ -2,9 +2,10 @@ import Link from "next/link";
 import { ComponentProps } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { cn } from "@/lib/utils";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 interface TipLinkProps extends ComponentProps<typeof Link> {
-  tip: string;
+  tip: string | React.ReactNode;
   className?: string;
 }
 
@@ -14,6 +15,7 @@ export function TipLink({
   children,
   ...linkProps
 }: TipLinkProps) {
+  const isExternal = linkProps.target === "_blank";
   return (
     <Tooltip>
       <TooltipTrigger asChild>
@@ -27,7 +29,16 @@ export function TipLink({
           {children}
         </Link>
       </TooltipTrigger>
-      <TooltipContent>{tip}</TooltipContent>
+      <TooltipContent>
+        {!isExternal ? (
+          tip
+        ) : (
+          <div className="flex items-center gap-1">
+            <span>{tip}</span>
+            <SquareArrowOutUpRight size={12} strokeWidth="3" />
+          </div>
+        )}
+      </TooltipContent>
     </Tooltip>
   );
 }
