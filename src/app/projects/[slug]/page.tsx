@@ -33,7 +33,7 @@ export default async function Project({
     options,
   );
   const postImageUrl = post?.logo
-    ? urlFor(post.logo)?.width(550).height(310).url()
+    ? urlFor(post.logo)?.width(640).height(640).url()
     : null;
   console.log(post);
   return (
@@ -43,7 +43,7 @@ export default async function Project({
         <PageWrapper className="flex flex-col gap-8 pt-8">
           <TipLink
             href="/projects"
-            className="flex w-fit items-center gap-1 text-base transition-all duration-300 hover:underline"
+            className="flex w-fit items-center gap-1 text-base transition-all duration-200 hover:underline"
             tip="Voltar para Projetos"
           >
             <ArrowLeft size={16} />
@@ -56,8 +56,8 @@ export default async function Project({
                 src={postImageUrl}
                 alt={post?.name}
                 className="object-contain"
-                width="90"
-                height="90"
+                width={90}
+                height={90}
               />
             )}
             <h1 className="text-4xl font-bold">{post?.name}</h1>
