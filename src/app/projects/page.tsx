@@ -8,9 +8,9 @@ import {
   PagePresentation,
   PageWrapper,
 } from "@/components/page";
-import { FeaturedProject } from "./_components/featured-project";
 import Footer from "@/components/footer";
 import { LetsConnect } from "@/components/lets-connect";
+import { Project } from "./_components/project";
 
 const options = { next: { revalidate: 30 } };
 
@@ -65,7 +65,8 @@ export default async function Projects() {
           </PageHeadline>
 
           {projects.map((project, index) => (
-            <FeaturedProject
+            <Project
+              type="featured"
               key={project.name}
               name={project.name}
               company={project.company}
@@ -77,6 +78,17 @@ export default async function Projects() {
               reverse={index % 2 !== 0}
             />
           ))}
+          <section className="flex flex-col gap-3">
+            <h2 className="text-2xl font-bold">Todos os projetos</h2>
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <Project type="regular" />
+              <Project type="regular" />
+              <Project type="regular" />
+              <Project type="regular" />
+              <Project type="regular" />
+              <Project type="regular" />
+            </div>
+          </section>
           <LetsConnect />
         </PageWrapper>
       </main>
