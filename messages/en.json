@@ -40,6 +40,11 @@
       "button": "Submit"
     }
   },
+  "NotFound": {
+    "headline": "Page Not Found",
+    "description": "The page you are looking for doesn't exist or has been removed",
+    "button": "Back to the home page"
+  },
   "LetsConnect": {
     "title": "Let's connect!",
     "description": "If you'd like to talk about development, technology, consulting, or product building, feel free to reach out on <linkedin>LinkedIn</linkedin> or send an email to <email>contact@karolwojtyla.dev</email>.",

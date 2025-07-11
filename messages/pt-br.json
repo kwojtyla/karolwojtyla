@@ -40,6 +40,11 @@
       "button": "Enviar"
     }
   },
+  "NotFound": {
+    "headline": "Página não encontrada",
+    "description": "A página que você procura não existe ou foi removida",
+    "button": "Voltar para a página inicial"
+  },
   "LetsConnect": {
     "title": "Vamos nos conectar!",
     "description": "Se quiser conversar sobre desenvolvimento, tecnologia, consultoria ou construção de produtos, fique à vontade para me chamar no <linkedin>LinkedIn</linkedin> ou enviar um e-mail para <email>contato@karolwojtyla.dev</email>.",
