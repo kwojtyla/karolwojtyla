@@ -34,16 +34,13 @@ export function Project({
   const isFeatured = type === "featured";
   const isRegular = type === "regular";
 
-  const containerClasses = clsx(
-    "flex flex-col gap-3 md:gap-0 w-full items-center",
-    {
-      "md:flex-row": isFeatured,
-      "md:flex-row-reverse": isFeatured && reverse,
+  const containerClasses = clsx("flex flex-col gap-3 w-full items-center", {
+    "md:flex-row": isFeatured,
+    "md:flex-row-reverse": isFeatured && reverse,
 
-      "flex-col gap-4 rounded-lg border border-gray-300 dark:border-gray-800 p-4":
-        isRegular,
-    },
-  );
+    "flex-col gap-4 rounded-lg border border-gray-300 dark:border-gray-800 p-4":
+      isRegular,
+  });
 
   const imageContainerClasses = clsx("relative rounded-lg", {
     "h-96 w-full md:w-1/2": isFeatured,
