@@ -16,7 +16,7 @@ const options = { next: { revalidate: 30 } };
 
 const PROJECTS_QUERY = `*[
   _type == "project" && defined(slug.current)
-]|order(publishedAt desc)[0...12]{
+]|order(publishedAt asc)[0...12]{
   _id,
   "coverUrl": cover.asset->url,
   shortDescription,
