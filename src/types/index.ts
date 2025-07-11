@@ -45,3 +45,37 @@ export type Research = {
   asAuthor: Paper[];
   asCoauthor: Paper[];
 };
+
+interface SanitySlug {
+  current: string;
+  _type: "slug";
+}
+
+interface SanityImage {
+  _type: "image";
+  imageUrl: string;
+  alt?: string;
+}
+
+interface SanityBodyBlock {
+  _type: string;
+  [key: string]: unknown;
+}
+
+export interface SanityProject {
+  _id: string;
+  coverUrl: string;
+  shortDescription: string;
+  name: string;
+  featured: boolean;
+  company: string;
+  companyLink: string;
+  position: string;
+  period: string;
+  projectLink: string;
+  stack: string;
+  slug: SanitySlug;
+  publishedAt: string;
+  logoUrl: string;
+  body: Array<SanityBodyBlock | SanityImage>;
+}

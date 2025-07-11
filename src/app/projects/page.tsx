@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/navbar";
-import { type SanityDocument } from "next-sanity";
 
 import { client } from "@/sanity/client";
 import {
@@ -11,6 +10,7 @@ import {
 import Footer from "@/components/footer";
 import { LetsConnect } from "@/components/lets-connect";
 import { Project } from "./_components/project";
+import { SanityProject } from "@/types";
 
 const options = { next: { revalidate: 30 } };
 
@@ -21,6 +21,7 @@ const PROJECTS_QUERY = `*[
   "coverUrl": cover.asset->url,
   shortDescription,
   name,
+  featured,
   company,
   companyLink,
   position,
@@ -40,12 +41,31 @@ const PROJECTS_QUERY = `*[
 }`;
 
 export default async function Projects() {
-  const projects = await client.fetch<SanityDocument[]>(
+  const projects = await client.fetch<SanityProject[]>(
     PROJECTS_QUERY,
     {},
     options,
   );
-  console.log(projects);
+
+  function handleDivideProjects(projects: SanityProject[]) {
+    return projects.reduce(
+      (
+        acc: { featured: SanityProject[]; notFeatured: SanityProject[] },
+        project,
+      ) => {
+        if (project.featured === true) {
+          acc.featured.push(project);
+        } else {
+          acc.notFeatured.push(project);
+        }
+        return acc;
+      },
+      { featured: [], notFeatured: [] },
+    );
+  }
+
+  const { featured, notFeatured } = handleDivideProjects(projects);
+
   return (
     <>
       <Navbar />
@@ -64,10 +84,10 @@ export default async function Projects() {
             </PagePresentation>
           </PageHeadline>
 
-          {projects.map((project, index) => (
+          {featured.map((project, index) => (
             <Project
               type="featured"
-              key={project.name}
+              key={project._id}
               name={project.name}
               company={project.company}
               companyLink={project.companyLink}
@@ -79,17 +99,27 @@ export default async function Projects() {
             />
           ))}
 
-          <section className="flex flex-col gap-3">
-            <h2 className="text-2xl font-bold">Todos os projetos</h2>
-            <div className="grid grid-cols-1 gap-y-2 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-              <Project type="regular" />
-              <Project type="regular" />
-              <Project type="regular" />
-              <Project type="regular" />
-              <Project type="regular" />
-              <Project type="regular" />
-            </div>
-          </section>
+          {notFeatured.length > 0 && (
+            <section className="flex flex-col gap-3">
+              <h2 className="text-2xl font-bold">Todos os projetos</h2>
+              <div className="grid grid-cols-1 gap-y-2 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
+                {notFeatured.map((project) => (
+                  <Project
+                    type="regular"
+                    key={project._id}
+                    name={project.name}
+                    company={project.company}
+                    companyLink={project.companyLink}
+                    shortDescription={project.shortDescription}
+                    cover={project.coverUrl}
+                    stack={project.stack}
+                    link={`projects/${project.slug.current}`}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
           <LetsConnect />
         </PageWrapper>
       </main>
