@@ -174,18 +174,18 @@ export function CommandPalette() {
             </div>
           </div>
         </div>
-        <DialogFooter className="hidden w-full rounded-b-lg bg-gray-200 px-4 py-2 text-xs sm:justify-start md:flex">
-          <div className="flex size-4 items-center justify-center rounded-xs border border-gray-100 bg-gray-50">
+        <DialogFooter className="dark:bg-card hidden w-full rounded-b-lg bg-gray-200 px-4 py-2 text-xs sm:justify-start md:flex">
+          <div className="bg-primary-foreground dark:border-muted flex size-4 items-center justify-center rounded-xs border border-gray-100">
             <CornerDownLeft size={8} />
           </div>
           <span className="font-medium text-gray-500">
             {t("enter-instruction")}
           </span>
           <div className="ml-auto flex items-center gap-2">
-            <div className="flex size-4 items-center justify-center rounded-xs border border-gray-100 bg-gray-50">
+            <div className="bg-primary-foreground dark:border-muted flex size-4 items-center justify-center rounded-xs border">
               <ArrowUp size={8} />
             </div>
-            <div className="flex size-4 items-center justify-center rounded-xs border border-gray-100 bg-gray-50">
+            <div className="bg-primary-foreground dark:border-muted flex size-4 items-center justify-center rounded-xs border border-gray-100">
               <ArrowDown size={8} />
             </div>
             <span className="font-medium text-gray-500">
