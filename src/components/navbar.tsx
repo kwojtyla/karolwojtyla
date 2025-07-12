@@ -3,14 +3,13 @@
 import Link from "next/link";
 import { MobileNav } from "./mobile-nav";
 import { LogoIcon } from "../../public/icons";
-import { Button, buttonVariants } from "./ui/button";
-import { Search } from "lucide-react";
 import { ThemeButton } from "./theme-button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { usePathname } from "next/navigation";
 import { LanguageSwitcher } from "./language-switcher";
 import { getPages } from "@/config/pages";
 import { useLocale, useTranslations } from "next-intl";
+import { CommandPalette } from "./command-palette";
 
 export function Navbar() {
   const actualRoute = usePathname();
@@ -52,15 +51,9 @@ export function Navbar() {
         <div className="hidden items-center gap-2.5 md:flex">
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button
-                className={buttonVariants({
-                  className:
-                    "bg-secondary hover:bg-secondary max-w-40 min-w-40 justify-start rounded-lg font-normal text-gray-400 shadow-none hover:text-gray-400 focus:outline-none",
-                })}
-              >
-                <Search size={20} />
-                Pesquisar
-              </Button>
+              <div role="button">
+                <CommandPalette />
+              </div>
             </TooltipTrigger>
             <TooltipContent>{t("navbar.search")}</TooltipContent>
           </Tooltip>

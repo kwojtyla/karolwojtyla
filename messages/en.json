@@ -71,6 +71,15 @@
   },
   "Footer": {
     "made": "Made with ☕ and so much ❤️"
+  },
+  "CommandPalette": {
+    "label": "Search",
+    "title": "Search the page",
+    "pages-subtitle": "Pages",
+    "search-placeholder": "Where to?",
+    "no-results": "No pages found",
+    "enter-instruction": "Go to page",
+    "navigate-instruction": "Navigate"
   }
 }
 
