@@ -4,8 +4,8 @@ import { TipLink } from "@/components/tip-link";
 import { Badge } from "@/components/ui/badge";
 import { parseStack } from "@/utils/parse-stack";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import { clsx } from "clsx";
+import { ProjectImage } from "./project-image"; // Ajuste o caminho conforme necessário
 
 interface FeaturedProjectProps {
   type: "featured" | "regular";
@@ -34,17 +34,17 @@ export function Project({
   const isFeatured = type === "featured";
   const isRegular = type === "regular";
 
+  const imageUrl = cover || "/images/image-placeholder.webp";
+
   const containerClasses = clsx("flex flex-col gap-3 w-full items-center", {
     "md:flex-row": isFeatured,
     "md:flex-row-reverse": isFeatured && reverse,
-
     "flex-col gap-4 rounded-lg border border-gray-300 dark:border-gray-800 p-4":
       isRegular,
   });
 
-  const imageContainerClasses = clsx("relative rounded-lg", {
+  const imageContainerClasses = clsx("rounded-lg", {
     "h-96 w-full md:w-1/2": isFeatured,
-
     "h-64 w-full": isRegular,
   });
 
@@ -54,7 +54,6 @@ export function Project({
       "w-full md:w-1/2": isFeatured,
       "p-0 md:pl-12": isFeatured && !reverse,
       "p-0 md:pr-12": isFeatured && reverse,
-
       "w-full": isRegular,
     },
   );
@@ -64,22 +63,19 @@ export function Project({
     "order-1": isRegular,
   });
 
+  console.log(imageUrl);
+
   return (
     <>
       <div className={containerClasses}>
-        <div className={imageContainerClasses}>
-          <Image
-            src={
-              cover ||
-              "https://cdn.sanity.io/images/dxlzuxy8/production/960f73a8da823e9799cca35fcd09120cc6718819-640x390.jpg"
-            }
-            alt="Teste"
-            className="rounded-lg object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority
-            fill
-          />
-        </div>
+        <ProjectImage
+          src={imageUrl}
+          alt={name || "Project image"}
+          containerClassName={imageContainerClasses}
+          className="rounded-lg"
+          priority={true}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
 
         <div className={contentContainerClasses}>
           <TipLink
@@ -155,6 +151,7 @@ export function Project({
           </TipLink>
         </div>
       </div>
+
       {isFeatured && (
         <div className="h-px w-full border-t border-gray-300 md:hidden dark:border-gray-800" />
       )}
