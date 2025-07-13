@@ -13,6 +13,11 @@
     "education-title": "Formação acadêmica",
     "certifications-title": "Certificações"
   },
+  "Blog": {
+    "headline": "Em breve...",
+    "presentation": "Tô arrumando aqui, viu?! Enquanto escrevo artigos pro blog e organizo as coisas por aqui, sinta-se à vontade para ver minhas",
+    "research-cta": "produções científicas"
+  },
   "Research": {
     "headline": "Lorem ipsum dolor sit amet consectetur. Amet nisl lacus pharetra dolor tincidunt eget interdum pellentesque.",
     "presentation": "Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet similique ut odio molestiae quo doloribus perferendis non eaque rerum! Ut iure assumenda At corrupti aspernatur nam ipsam esse est facilis nemo.\n\nUt fugiat accusamus ut enim tempore quo voluptate incidunt nam voluptate repudiandae quo dicta dignissimos ea repellat sapiente. Est eligendi dignissimos est quia laboriosam sed tempora neque vel numquam sunt qui iste quia!\n\nEa quibusdam accusamus et ratione adipisci qui cumque molestias et totam molestiae. Sit accusantium ipsum aut reprehenderit ipsam et labore beatae 33 alias expedita ab eveniet natus. Eum quas harum et ipsa mollitia ab molestiae dolorum qui dolores totam.",
@@ -56,6 +61,7 @@
     "education-item": "Ir para o site da instituição",
     "certification-item": "Ver credencial",
     "paper-item": "Ler artigo completo",
+    "research-cta": "Ir para a seção",
     "social": {
       "linkedin": "Ver LinkedIn",
       "instagram": "Ver instagram",
