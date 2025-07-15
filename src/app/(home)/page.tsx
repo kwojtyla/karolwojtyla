@@ -1,5 +1,5 @@
 "use client";
-import LastArticle from "@/components/last-article";
+// import LastArticle from "@/components/last-article";
 import { Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import { WidthWrapper } from "@/components/width-wrapper";
@@ -7,9 +7,54 @@ import { Download } from "lucide-react";
 import Image from "next/image";
 import { Social } from "@/components/social";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import { useState } from "react";
+import { LoadingButton } from "@/components/ui/loading-button";
 
 export default function Home() {
   const t = useTranslations("Home");
+  const locale = useLocale();
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDownloadResume = async () => {
+    setIsDownloading(true);
+
+    try {
+      const filename =
+        locale === "pt-br"
+          ? "Currículo_Karol Wojtyla.pdf"
+          : "Resume_Karol Wojtyla.pdf";
+
+      const response = await fetch(`/api/download?locale=${locale}`);
+
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(url);
+      } else {
+        const errorMessage =
+          locale === "pt-br"
+            ? "Erro ao baixar o currículo."
+            : "Error downloading resume.";
+        alert(errorMessage);
+      }
+    } catch (error) {
+      console.error("Download error:", error);
+      const errorMessage =
+        locale === "pt-br"
+          ? "Erro ao baixar o currículo."
+          : "Error downloading resume.";
+      alert(errorMessage);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
 
   return (
     <>
@@ -38,11 +83,11 @@ export default function Home() {
               {t("title")}
             </div>
 
-            <LastArticle
+            {/* <LastArticle
               placeholder={t("article-placeholder")}
               title="Passive View: Simplificando a separação entre lógica e interface no desenvolvimento de interfaces"
               link="/"
-            />
+            /> */}
 
             <Social />
 
@@ -65,11 +110,19 @@ export default function Home() {
               et ipsa mollitia ab molestiae dolorum qui dolores totam.
             </p>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 pb-12 md:pb-0">
               <Button variant="default">{t("cta-button")}</Button>
-              <Button variant="ghost">
-                <Download /> {t("resume-button")}
-              </Button>
+              <LoadingButton
+                variant="ghost"
+                onClick={handleDownloadResume}
+                loading={isDownloading}
+                loadingLabel={
+                  locale === "pt-br" ? "Baixando..." : "Downloading..."
+                }
+              >
+                <Download />
+                {t("resume-button")}
+              </LoadingButton>
             </div>
           </section>
         </WidthWrapper>
