@@ -63,8 +63,6 @@ export function Project({
     "order-1": isRegular,
   });
 
-  console.log(imageUrl);
-
   return (
     <>
       <div className={containerClasses}>
