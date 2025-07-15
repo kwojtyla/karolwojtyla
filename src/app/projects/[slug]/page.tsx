@@ -6,11 +6,19 @@ import Image from "next/image";
 import { PageWrapper } from "@/components/page";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Home } from "lucide-react";
 import ProjectInfo from "../_components/project-info";
 import { LetsConnect } from "@/components/lets-connect";
 import { portableTextComponents } from "@/components/portable-text";
 import { TipLink } from "@/components/tip-link";
+import {
+  Breadcrumb,
+  BreadcrumbSeparator,
+  BreadcrumbItem,
+  BreadcrumbList,
+  BreadcrumbLink,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 
 const PROJECT_QUERY = `*[_type == "project" && slug.current == $slug][0]`;
 
@@ -35,12 +43,29 @@ export default async function Project({
   const postImageUrl = post?.logo
     ? urlFor(post.logo)?.width(640).height(640).url()
     : null;
-  console.log(post);
   return (
     <>
       <Navbar />
       <main>
         <PageWrapper className="flex flex-col gap-8 pt-8">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">
+                  <Home size={20} />
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/projects">Projetos</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{post?.name}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+
           <TipLink
             href="/projects"
             className="flex w-fit items-center gap-1 text-base transition-all duration-200 hover:underline"
