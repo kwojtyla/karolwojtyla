@@ -65,7 +65,7 @@ export default function Contact() {
         ),
         action: {
           label: "OK",
-          onClick: () => console.log("OK"),
+          onClick: () => {},
         },
       });
       reset();
@@ -74,7 +74,7 @@ export default function Contact() {
         description: "Tente novamente mais tarde",
         action: {
           label: "OK",
-          onClick: () => console.log("OK"),
+          onClick: () => {},
         },
       });
     }
