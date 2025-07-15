@@ -7,11 +7,14 @@
     "resume-button": "Baixar currículo"
   },
   "About": {
-    "headline": "Lorem ipsum dolor sit amet consectetur. Amet nisl lacus pharetra dolor tincidunt eget interdum pellentesque.",
+    "headline": "Desde 2017 criando soluções digitais com propósito, impacto real e uma paixão genuína por transformar o mundo com tecnologia",
     "presentation": "Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet similique ut odio molestiae quo doloribus perferendis non eaque rerum! Ut iure assumenda At corrupti aspernatur nam ipsam esse est facilis nemo.\n\nUt fugiat accusamus ut enim tempore quo voluptate incidunt nam voluptate repudiandae quo dicta dignissimos ea repellat sapiente. Est eligendi dignissimos est quia laboriosam sed tempora neque vel numquam sunt qui iste quia!\n\nEa quibusdam accusamus et ratione adipisci qui cumque molestias et totam molestiae. Sit accusantium ipsum aut reprehenderit ipsam et labore beatae 33 alias expedita ab eveniet natus. Eum quas harum et ipsa mollitia ab molestiae dolorum qui dolores totam.",
     "experiences-title": "Experiências profissionais",
     "education-title": "Formação acadêmica",
     "certifications-title": "Certificações"
+  },
+  "Projects": {
+    "headline": "Construindo experiências digitais e produtos de alto valor que impactam a rotina de centenas de usuários"
   },
   "Blog": {
     "headline": "Em breve...",
@@ -19,7 +22,7 @@
     "research-cta": "produções científicas"
   },
   "Research": {
-    "headline": "Lorem ipsum dolor sit amet consectetur. Amet nisl lacus pharetra dolor tincidunt eget interdum pellentesque.",
+    "headline": "Para além do código: fazendo ciência e construindo pontes entre tecnologia e comunidade",
     "presentation": "Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet similique ut odio molestiae quo doloribus perferendis non eaque rerum! Ut iure assumenda At corrupti aspernatur nam ipsam esse est facilis nemo.\n\nUt fugiat accusamus ut enim tempore quo voluptate incidunt nam voluptate repudiandae quo dicta dignissimos ea repellat sapiente. Est eligendi dignissimos est quia laboriosam sed tempora neque vel numquam sunt qui iste quia!\n\nEa quibusdam accusamus et ratione adipisci qui cumque molestias et totam molestiae. Sit accusantium ipsum aut reprehenderit ipsam et labore beatae 33 alias expedita ab eveniet natus. Eum quas harum et ipsa mollitia ab molestiae dolorum qui dolores totam.",
     "authored-title": "Publicações de minha autoria",
     "coauthored-title": "Publicações de minha co-autoria"
