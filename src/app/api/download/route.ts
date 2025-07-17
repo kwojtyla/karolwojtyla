@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
   const Bucket = process.env.R2_BUCKET_NAME;
   const Key =
     locale === "pt-br"
-      ? "Currículo_Karol Wojtyla.pdf"
+      ? "Curriculo_Karol Wojtyla.pdf"
       : "Resume_Karol Wojtyla.pdf";
 
   try {

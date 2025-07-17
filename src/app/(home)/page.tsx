@@ -11,6 +11,7 @@ import { useLocale } from "next-intl";
 import { useState } from "react";
 import { LoadingButton } from "@/components/ui/loading-button";
 import Link from "next/link";
+import { toast } from "sonner";
 
 export default function Home() {
   const t = useTranslations("Home");
@@ -23,7 +24,7 @@ export default function Home() {
     try {
       const filename =
         locale === "pt-br"
-          ? "Currículo_Karol Wojtyla.pdf"
+          ? "Curriculo_Karol Wojtyla.pdf"
           : "Resume_Karol Wojtyla.pdf";
 
       const response = await fetch(`/api/download?locale=${locale}`);
@@ -43,7 +44,16 @@ export default function Home() {
           locale === "pt-br"
             ? "Erro ao baixar o currículo."
             : "Error downloading resume.";
-        alert(errorMessage);
+        toast.error(errorMessage, {
+          description:
+            locale === "pt-br"
+              ? "Tente novamente mais tarde"
+              : "Try again later",
+          action: {
+            label: "OK",
+            onClick: () => {},
+          },
+        });
       }
     } catch (error) {
       console.error("Download error:", error);
@@ -51,7 +61,14 @@ export default function Home() {
         locale === "pt-br"
           ? "Erro ao baixar o currículo."
           : "Error downloading resume.";
-      alert(errorMessage);
+      toast.error(errorMessage, {
+        description:
+          locale === "pt-br" ? "Tente novamente mais tarde" : "Try again later",
+        action: {
+          label: "OK",
+          onClick: () => {},
+        },
+      });
     } finally {
       setIsDownloading(false);
     }
