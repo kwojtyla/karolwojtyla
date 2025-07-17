@@ -21,12 +21,7 @@ export default function Projects() {
         <PageWrapper className="flex flex-col gap-8">
           <PageHeadline>
             <PageHeader>{t("headline")}</PageHeader>
-            <PagePresentation>
-              Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet
-              similique ut odio molestiae quo doloribus perferendis non eaque
-              <span className="text-primary"> rerum</span>! Ut iure assumenda At
-              corrupti aspernatur nam ipsam esse est facilis nemo.
-            </PagePresentation>
+            <PagePresentation>{t("presentation")}</PagePresentation>
           </PageHeadline>
 
           <ProjectsList />
