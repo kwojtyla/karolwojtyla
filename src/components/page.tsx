@@ -52,7 +52,13 @@ function PagePresentation({
   ...props
 }: PagePresentationProps) {
   return (
-    <p className={cn("text-gray-500 dark:text-gray-300", className)} {...props}>
+    <p
+      className={cn(
+        "whitespace-pre-line text-gray-500 dark:text-gray-300",
+        className,
+      )}
+      {...props}
+    >
       {children}
     </p>
   );

@@ -1,7 +1,7 @@
 "use client";
 // import LastArticle from "@/components/last-article";
 import { Navbar } from "@/components/navbar";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { WidthWrapper } from "@/components/width-wrapper";
 import { Download } from "lucide-react";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { useState } from "react";
 import { LoadingButton } from "@/components/ui/loading-button";
+import Link from "next/link";
 
 export default function Home() {
   const t = useTranslations("Home");
@@ -91,27 +92,17 @@ export default function Home() {
 
             <Social />
 
-            <p className="text-gray-500 dark:text-gray-300">
-              Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet
-              similique ut odio molestiae quo doloribus perferendis non eaque
-              <span className="text-primary"> rerum</span>! Ut iure assumenda At
-              corrupti aspernatur nam ipsam esse est facilis nemo.
-              <br />
-              <br />
-              Ut fugiat accusamus ut enim tempore quo voluptate incidunt nam
-              voluptate repudiandae quo dicta dignissimos ea repellat sapiente.
-              Est eligendi dignissimos est quia laboriosam sed tempora neque vel
-              numquam sunt qui iste quia!
-              <br />
-              <br />
-              Ea quibusdam accusamus et ratione adipisci qui cumque molestias et
-              totam molestiae. Sit accusantium ipsum aut reprehenderit ipsam et
-              labore beatae 33 alias expedita ab eveniet natus. Eum quas harum
-              et ipsa mollitia ab molestiae dolorum qui dolores totam.
+            <p className="whitespace-pre-line text-gray-500 dark:text-gray-300">
+              {t("presentation")}
             </p>
 
             <div className="flex items-center gap-2 pb-12 md:pb-0">
-              <Button variant="default">{t("cta-button")}</Button>
+              <Link
+                href="/about"
+                className={buttonVariants({ variant: "default" })}
+              >
+                {t("cta-button")}
+              </Link>
               <LoadingButton
                 variant="ghost"
                 onClick={handleDownloadResume}
