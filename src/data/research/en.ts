@@ -9,7 +9,7 @@ export const research: Research = {
         "EducaXP: Breaking Educational Barriers and Connecting Students through Gamification in the Classroom",
       year: 2024,
       event: "10th National Education Congress (CONEDU)",
-      link: "/",
+      link: "https://editorarealize.com.br/artigo/visualizar/109652",
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ export const research: Research = {
       year: 2024,
       event:
         "1st International Congress on Education, Science and Technology (CIECT)",
-      link: "/",
+      link: "https://zenodo.org/records/13763902",
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ export const research: Research = {
       year: 2024,
       event:
         "2nd National Symposium on Teaching, Research and Extension (SIEPEX)",
-      link: "/",
+      link: "https://www.even3.com.br/anais/iisinepexviisiepex/986046-inteligencia-artificial-no-desenvolvimento-de-software--uma-revisao-integrativa",
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ export const research: Research = {
       year: 2024,
       event:
         "2nd National Symposium on Teaching, Research and Extension (SIEPEX)",
-      link: "/",
+      link: "https://www.even3.com.br/anais/iisinepexviisiepex/985910-o-impacto-de-fatores-humanos-na-qualidade-do-software-e-produtividade-de-equipes-de-desenvolvimento",
     },
   ],
   asCoauthor: [
@@ -50,7 +50,7 @@ export const research: Research = {
       category: "Article",
       year: 2025,
       event: "10th Workshop on Social, Human and Economic Aspects of Software",
-      link: "/",
+      link: "https://sol.sbc.org.br/index.php/washes/article/view/35927",
     },
     {
       id: 6,
@@ -59,7 +59,7 @@ export const research: Research = {
       category: "Article",
       year: 2024,
       event: "10th National Education Congress (CONEDU)",
-      link: "/",
+      link: "https://editorarealize.com.br/artigo/visualizar/109550",
     },
     {
       id: 7,
@@ -68,7 +68,7 @@ export const research: Research = {
       year: 2024,
       event:
         "3rd International Seminar on Languages, Cultures, Technologies and Inclusion (SILICTI)",
-      link: "/",
+      link: "https://www.even3.com.br/anais/iiisilicti/799507-desenvolvimento-de-um-prototipo-de-uma-plataforma-de-feedback-educacional",
     },
     {
       id: 8,
@@ -78,7 +78,7 @@ export const research: Research = {
       year: 2024,
       event:
         "2nd National Symposium on Teaching, Research and Extension (SIEPEX-UFPA)",
-      link: "/",
+      link: "https://www.even3.com.br/anais/iisinepexviisiepex/985971-analise-da-implementacao-do-5g-e-os-impactos-sociais-com-relacao-a-qualidade-de-rede",
     },
     {
       id: 9,
@@ -87,7 +87,7 @@ export const research: Research = {
       year: 2023,
       event:
         "2nd Academic Week of Informatics at IFPA Castanhal Campus (SEMAINF)",
-      link: "/",
+      link: "https://www.even3.com.br/anais/semainf2023/778579-monitoramento-inteligente-de-agua--uma-abordagem-com-esp32",
     },
   ],
 };

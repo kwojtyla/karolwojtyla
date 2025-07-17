@@ -15,7 +15,8 @@
     "certifications-title": "Certifications"
   },
   "Projects": {
-    "headline": "Building digital experiences and high-value products that impact the daily lives of hundreds of users"
+    "headline": "Building digital experiences and high-value products that impact the daily lives of hundreds of users",
+    "presentation": "Throughout my journey, I’ve had the opportunity to turn ideas into digital experiences that simplify routines, solve real-world problems, and connect people to technology in smart and accessible ways. Here, you’ll find some of these solutions – websites, systems, and applications I’ve developed with purpose, dedication, and attention to detail.\n\nSome projects are still evolving, others have completed their cycle. And there are also those that, due to confidentiality agreements, can’t be shown publicly. Still, every line of code represents a part of my story."
   },
   "Blog": {
     "headline": "Coming soon...",
@@ -24,13 +25,13 @@
   },
   "Research": {
     "headline": "Beyond Code: doing science and building bridges between technology and community",
-    "presentation": "Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet similique ut odio molestiae quo doloribus perferendis non eaque rerum! Ut iure assumenda At corrupti aspernatur nam ipsam esse est facilis nemo.\n\nUt fugiat accusamus ut enim tempore quo voluptate incidunt nam voluptate repudiandae quo dicta dignissimos ea repellat sapiente. Est eligendi dignissimos est quia laboriosam sed tempora neque vel numquam sunt qui iste quia!\n\nEa quibusdam accusamus et ratione adipisci qui cumque molestias et totam molestiae. Sit accusantium ipsum aut reprehenderit ipsam et labore beatae 33 alias expedita ab eveniet natus. Eum quas harum et ipsa mollitia ab molestiae dolorum qui dolores totam.",
+    "presentation": "Technology has always been more than just a tool for me – it’s a way to connect realities, amplify voices, and solve challenges that matter. In this section, I share some of the scientific research I’ve developed over the years, combining academic rigor with a commitment to practical impact.\n\nFrom inclusive digital solutions to applied computing in social contexts, these projects reflect my belief that science, when guided by empathy and purpose, becomes a powerful agent of transformation.",
     "authored-title": "Authored Publications",
     "coauthored-title": "Co-authored Publications"
   },
   "Contact": {
     "headline": "Let's talk!",
-    "presentation": "Lorem ipsum dolor sit amet. Qui natus accusamus ea eveniet similique ut odio molestiae quo doloribus perferendis non eaque rerum! Ut iure assumenda At corrupti aspernatur nam ipsam esse est facilis nemo.",
+    "presentation": "If you’ve made it this far, something must have caught your attention — and that already means a lot to me. Whether it’s to exchange ideas, share a project, start a collaboration, or just talk about life, I’m always open to new connections.\n\nFill out the form below or feel free to reach out through my social media. I’d love to hear from you.",
     "email-title": "Send me an email",
     "social-title": "Contact me through social media",
     "form": {
