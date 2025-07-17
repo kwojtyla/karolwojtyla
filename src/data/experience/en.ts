@@ -10,7 +10,7 @@ export const experiences: Job[] = [
     },
     type: "Internship",
     description:
-      "Atuei no desenvolvimento de features, integrações via API e testes, entregando soluções escaláveis para automação e gestão otimizada de imóveis de temporada do segmento de Hosting da Seazone.",
+      "I contributed to the development of features, API integrations, and testing, delivering scalable solutions for the automation and optimized management of short-term rental properties in Seazone’s Hosting segment.",
     startYear: 2024,
     endYear: "Present",
   },
@@ -23,7 +23,7 @@ export const experiences: Job[] = [
     },
     type: "Junior Enterprise",
     description:
-      "Liderei uma equipe ágil de 16 pessoas, e, juntos, pudemos desenvolver 3 grandes projetos que puderam não somente impactar empresas locais, mas também promover a inserção de 8 membros no mercado de trabalho. ",
+      "I led an agile team of 16 people, and together we developed 3 major projects that not only impacted local businesses but also helped 8 team members enter the job market.",
     startYear: 2024,
     endYear: "Present",
     className: "md:col-start-1 md:row-start-2",
@@ -34,7 +34,7 @@ export const experiences: Job[] = [
     company: { name: "Oi S/A", link: "https://oi.com.br" },
     type: "Internship",
     description:
-      "Atuei na gestão de projetos, definição de indicadores e evolução tecnológica de processos, solucionando gargalos de +200 aplicações sem gestão e capitaneando o handover de processos operacionais nas lojas de aplicativos",
+      "I was involved in project management, KPI definition, and technological evolution of internal processes, solving bottlenecks across 200+ unmanaged applications and leading the handover of operational processes in app stores.",
     startYear: 2022,
     endYear: 2024,
     className: "md:col-start-1 md:row-start-3",
@@ -48,7 +48,7 @@ export const experiences: Job[] = [
     },
     type: "Internship",
     description:
-      "Fui o ponto focal TI do IMV, e pude construir todo o parque tecnológico do instituto: desde a construção de inventário infraestrutural até o desenvolvimento do portal oficial do instituto e suas redes sociais.",
+      "I served as the IT focal point at IMV, where I built the institute’s entire tech infrastructure—from assembling the hardware inventory to developing the official website and managing its social media presence.",
     startYear: 2022,
     endYear: 2022,
   },
@@ -61,7 +61,7 @@ export const experiences: Job[] = [
     },
     type: "Internship",
     description:
-      "Gerenciei o portal oficial do campus Bragança e prestei suporte à infraestrutura de TI. Desenvolvi um agente automatizado que reduziu em 85% a carga de trabalho na emissão de certificados.",
+      "I managed the official portal of the Bragança campus and supported its IT infrastructure. I also developed an automated agent that reduced the workload for certificate issuance by 85%.",
     startYear: 2018,
     endYear: 2019,
   },
