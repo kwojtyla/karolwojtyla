@@ -12,6 +12,7 @@ import { useState } from "react";
 import { LoadingButton } from "@/components/ui/loading-button";
 import Link from "next/link";
 import { toast } from "sonner";
+import posthog from "posthog-js";
 
 export default function Home() {
   const t = useTranslations("Home");
@@ -72,6 +73,7 @@ export default function Home() {
     } finally {
       setIsDownloading(false);
     }
+    posthog.capture("Resume Downloaded", { property: "value" });
   };
 
   return (
