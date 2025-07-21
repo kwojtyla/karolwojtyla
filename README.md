@@ -25,7 +25,7 @@ git clone https://github.com/kwojtyla/karolwojtyla.git
 #### 2. Navigate to the project directory:
 
 ```bash
-cd tropa-digital
+cd karolwojtyla
 ```
 
 #### 3. Install required dependencies using pnpm:
