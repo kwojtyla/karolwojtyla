@@ -11,7 +11,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       <PostHogProvider>
         <ThemeProvider
           attribute="class"
-          defaultTheme="white"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

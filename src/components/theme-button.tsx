@@ -14,7 +14,11 @@ export function ThemeButton() {
   }, []);
 
   if (!isMounted) {
-    return null;
+    return (
+      <Button className="hover:bg-secondary bg-transparent shadow-none">
+        <div className="h-5 w-5" />
+      </Button>
+    );
   }
 
   const isLightTheme = theme === "light";
