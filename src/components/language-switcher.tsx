@@ -22,7 +22,7 @@ export function LanguageSwitcher() {
           <SelectValue placeholder="Idioma" />
         )}
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="z-100">
         <SelectItem value="pt-br">
           <div className="flex items-center gap-2">
             <BrazilFlag size={20} />
