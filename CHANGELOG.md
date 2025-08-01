@@ -1,5 +1,61 @@
 # Changelog
 
+## [1.6.0](https://github.com/kwojtyla/karolwojtyla/compare/v1.5.0...v1.6.0) (2025-08-01)
+
+
+### Features
+
+* add about page ([c7fff7d](https://github.com/kwojtyla/karolwojtyla/commit/c7fff7dec46ef5e1401f6c654223e95864427dfc))
+* add blog page ([5bc0e29](https://github.com/kwojtyla/karolwojtyla/commit/5bc0e294cbcc61885f926e0ba1ea4d8cd8ea714a))
+* add breadcrumb component ([9e5c6a4](https://github.com/kwojtyla/karolwojtyla/commit/9e5c6a4fdfa67b28c55aa91a45b134f90d1f67c5))
+* add command palette component ([03d9c8c](https://github.com/kwojtyla/karolwojtyla/commit/03d9c8c31d6e38bb8fee66a4970d84a13c3f9236))
+* add contact page ([82c2672](https://github.com/kwojtyla/karolwojtyla/commit/82c26726d181b309217b569f70de197515c98864))
+* add footer component ([1e52a74](https://github.com/kwojtyla/karolwojtyla/commit/1e52a74fa09ecac9ea4de6b0c74fcc501a814aa8))
+* add husky and lint-staged ([5c0f9ab](https://github.com/kwojtyla/karolwojtyla/commit/5c0f9ab32991d068f13e1be9addcc5a6a774f038))
+* add initial projects page structure ([ac88115](https://github.com/kwojtyla/karolwojtyla/commit/ac88115ea2facdf26ec2aec7621ad0534a1659a3))
+* add internalization (i18n) to project and refactor texts ([5c92922](https://github.com/kwojtyla/karolwojtyla/commit/5c92922734e32ee4488a983ae0d4571b8dd0d3d8))
+* add not found page ([ba7c032](https://github.com/kwojtyla/karolwojtyla/commit/ba7c03220517e0e770f724a6c976ad5ca96f1615))
+* add posthog ([87a1212](https://github.com/kwojtyla/karolwojtyla/commit/87a12121b704ca4514c324b1d59995d96cb4ab5d))
+* add posthog ([e013a44](https://github.com/kwojtyla/karolwojtyla/commit/e013a4411906c1d855843eccb7723a2a620e38e4))
+* add research page ([2418d81](https://github.com/kwojtyla/karolwojtyla/commit/2418d817aa4a9dbed3952ce624a49bde748d05c4))
+* add responsive version ([d2dad8f](https://github.com/kwojtyla/karolwojtyla/commit/d2dad8f8686f9a23b408127b0e697e9b6e42562b))
+* add sanity for content management ([154f97d](https://github.com/kwojtyla/karolwojtyla/commit/154f97d2d1ff6f252267cf6996169cb184059eaa))
+* add web manifest file ([42ba243](https://github.com/kwojtyla/karolwojtyla/commit/42ba2433b9a4f726563a05c02a82de6f7aedb6bf))
+* **home:** add download resume function ([0dba129](https://github.com/kwojtyla/karolwojtyla/commit/0dba12950701983278bc1716267b9b25fd5d9608))
+* **home:** add download resume function ([60117b2](https://github.com/kwojtyla/karolwojtyla/commit/60117b28912055fb60b1d3b15fbef2672183ace5))
+* **home:** add home page ([a35be2b](https://github.com/kwojtyla/karolwojtyla/commit/a35be2b0c353a86956252e13754ffda14f90b6af))
+* **home:** add hover and tooltips to links ([30e3593](https://github.com/kwojtyla/karolwojtyla/commit/30e3593a3657623adcf745bef9152733363cadbf))
+* **navbar:** add navbar component ([b41b19e](https://github.com/kwojtyla/karolwojtyla/commit/b41b19ec456ca312ce660c31def544b2107fa952))
+* **project:** add breadcrumb component ([b1233ca](https://github.com/kwojtyla/karolwojtyla/commit/b1233ca3cfc2da097b1d7892009bf85dd421db9a))
+* **project:** add link on project name ([fe930df](https://github.com/kwojtyla/karolwojtyla/commit/fe930df8b592b7f9fe78f4f1821bb272e359455f))
+* **project:** add regular project variant ([55d7c4b](https://github.com/kwojtyla/karolwojtyla/commit/55d7c4b55f88dc4d95ce23eb8f65465e24ef449f))
+* **project:** add zoom for project images ([5fbe310](https://github.com/kwojtyla/karolwojtyla/commit/5fbe31084e11c651aa2de68f9ad393d0372d189f))
+* **projects:** add interleaved rendering for featured projects ([d79c973](https://github.com/kwojtyla/karolwojtyla/commit/d79c9730274ce711e184c679f293f0cbf0812efa))
+* **projects:** enable feature flag to redirect users to project link instead project page ([0ba5fda](https://github.com/kwojtyla/karolwojtyla/commit/0ba5fda6d6b44c007c5fcd6b612ae2b074d1865b))
+* **projects:** enable feature flag to redirect users to project link… ([ea6b919](https://github.com/kwojtyla/karolwojtyla/commit/ea6b919a75e4c25f83608ec6cc10825c93900b37))
+* **projects:** populate page with real projects ([20a151f](https://github.com/kwojtyla/karolwojtyla/commit/20a151ff0856d71894fa74cc5916e31165804573))
+* **sanity:** add custom page for project ([c6573a3](https://github.com/kwojtyla/karolwojtyla/commit/c6573a3277ef4f07068364e03b30c4ecb215d34b))
+* **scroll:** add custom scrollbar ([64953c0](https://github.com/kwojtyla/karolwojtyla/commit/64953c07d61963e8aed8f653e25fe9cc0639ea93))
+* **tip-link:** add icon for external links ([9632531](https://github.com/kwojtyla/karolwojtyla/commit/9632531307ff5c21dd488f718d55bec96b9b46fe))
+
+
+### Bug Fixes
+
+* adjust image height ([04cf5f5](https://github.com/kwojtyla/karolwojtyla/commit/04cf5f5c6ac986e8d2a791dee35827f23dfdf2a5))
+* adjust labeling on release-please ([02033bd](https://github.com/kwojtyla/karolwojtyla/commit/02033bd250b11c827209056ff0d33f4b9158fbd9))
+* change open graph ([4b8299a](https://github.com/kwojtyla/karolwojtyla/commit/4b8299a4948783dfa1d7c430cf0ad729a6da8b54))
+* change open graph ([89e4074](https://github.com/kwojtyla/karolwojtyla/commit/89e407405665bade1a13b26aedb731b668b59661))
+* **command-palette:** adjust dark mode styling for modal footer ([040d7e1](https://github.com/kwojtyla/karolwojtyla/commit/040d7e1602324e696a8a40628f0fe8e52c615c27))
+* general styling and logic adjustments ([762d797](https://github.com/kwojtyla/karolwojtyla/commit/762d797346a3e59e6281c85e94137038b9f27d61))
+* **navbar:** adjust language switch tooltip z-index ([8d176d4](https://github.com/kwojtyla/karolwojtyla/commit/8d176d4bc708bdf14d93edb74bcccd68239b8863))
+* **navbar:** adjust language switch tooltip z-index ([886484c](https://github.com/kwojtyla/karolwojtyla/commit/886484cf61e7a16562e6e3a906552ac260a4fec5))
+* **project-item:** adjust gap on regular cards mobile ([d342561](https://github.com/kwojtyla/karolwojtyla/commit/d3425612de3bc64db05f9ac0b36234bd82a7b3fe))
+* resolve infinite loop ([43c7c2f](https://github.com/kwojtyla/karolwojtyla/commit/43c7c2fbc99ffd55a7c5c520bc49ae648e8dc434))
+* **resume-download:** remove special characteres from server action ([7b6c9cc](https://github.com/kwojtyla/karolwojtyla/commit/7b6c9cc137ff3716a32859d6d5e26bb8d499f7a3))
+* **resume-download:** remove special characteres from server action ([a262b5c](https://github.com/kwojtyla/karolwojtyla/commit/a262b5cdb496cbce49e7a22190dec764d440715a))
+* **theme-toggle:** ensures that the theme is changed correctly on the first interaction ([7185c9b](https://github.com/kwojtyla/karolwojtyla/commit/7185c9b0c21bc983fc24ce99b39573b712c8e2ce))
+* **theme-toggle:** ensures that the theme is changed correctly on the… ([c4cc2ba](https://github.com/kwojtyla/karolwojtyla/commit/c4cc2bafd524f42778bde686104c4a1a0ddd0224))
+
 ## [1.5.0](https://github.com/kwojtyla/karolwojtyla/compare/v1.4.0...v1.5.0) (2025-08-01)
 
 
