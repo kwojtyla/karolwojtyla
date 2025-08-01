@@ -71,7 +71,9 @@ export function Navbar() {
                 <LanguageSwitcher />
               </div>
             </TooltipTrigger>
-            <TooltipContent>{t("navbar.language")}</TooltipContent>
+            <TooltipContent className="z-50">
+              {t("navbar.language")}
+            </TooltipContent>
           </Tooltip>
         </div>
 
