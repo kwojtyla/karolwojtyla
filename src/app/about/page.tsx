@@ -14,6 +14,7 @@ import { LetsConnect } from "@/components/lets-connect";
 import { useLocale, useTranslations } from "next-intl";
 import { getExperiences } from "@/data/experience";
 import { getEducation } from "@/data/education";
+import { Carousel, CarouselContent } from "@/components/ui/carousel";
 
 export default function About() {
   const t = useTranslations("About");
@@ -61,7 +62,23 @@ export default function About() {
           </section>
           <section className="flex flex-col gap-3">
             <h2 className="text-2xl font-bold">{t("certifications-title")}</h2>
-            <div className="flex flex-col gap-3 md:flex-row md:gap-4">
+            <Carousel className="hidden md:block">
+              <CarouselContent className="flex flex-col gap-3 md:ml-0.5 md:flex-row md:gap-4">
+                {certifications.map((certification) => (
+                  <CertificationItem
+                    key={certification.id}
+                    title={certification.title}
+                    issuer={certification.issuer}
+                    badge={certification.badge}
+                    badgeUrl={certification.badgeUrl}
+                    startYear={certification.startYear}
+                    endYear={certification.endYear}
+                  />
+                ))}
+              </CarouselContent>
+            </Carousel>
+
+            <div className="flex flex-col gap-3 md:hidden">
               {certifications.map((certification) => (
                 <CertificationItem
                   key={certification.id}
