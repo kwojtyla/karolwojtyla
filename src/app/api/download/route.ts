@@ -67,8 +67,6 @@ export async function GET(request: NextRequest) {
     const command = new GetObjectCommand({ Bucket, Key });
     const data = await S3.send(command);
 
-    console.log(data);
-
     if (!data.Body) {
       return new Response("Arquivo não encontrado", { status: 404 });
     }
