@@ -12,10 +12,11 @@ name: release-please
 jobs:
   release-please:
     runs-on: ubuntu-latest
-    if: github.actor != 'github-actions[bot]'
+    if: |
+      github.actor != 'github-actions[bot]' &&
+      !startsWith(github.event.head_commit.message, 'chore(main): release')
     steps:
       - uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: simple
-          skip-labeling: true
