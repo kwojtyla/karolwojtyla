@@ -8,7 +8,7 @@ export const experiences: Job[] = [
       name: "Seazone",
       link: "https://seazone.com.br",
     },
-    type: "Internship",
+    type: "Full-Time",
     description:
       "I contributed to the development of features, API integrations, and testing, delivering scalable solutions for the automation and optimized management of short-term rental properties in Seazone’s Hosting segment.",
     startYear: 2024,

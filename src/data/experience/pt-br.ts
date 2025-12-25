@@ -8,7 +8,7 @@ export const experiences: Job[] = [
       name: "Seazone",
       link: "https://seazone.com.br",
     },
-    type: "Estágio",
+    type: "Full-Time",
     description:
       "Atuei no desenvolvimento de features, integrações via API e testes, entregando soluções escaláveis para automação e gestão otimizada de imóveis de temporada do segmento de Hosting da Seazone.",
     startYear: 2024,
