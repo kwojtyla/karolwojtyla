@@ -3,6 +3,16 @@ import { Certification } from "@/types";
 export const certifications: Certification[] = [
   {
     id: 1,
+    title: "AWS Certified Solutions Architect - Associate",
+    issuer: "Amazon Web Services",
+    badge: "/images/saa.webp",
+    badgeUrl:
+      "https://www.credly.com/badges/61a5ae90-a070-49e5-98ad-f39adf84778e",
+    startYear: 2025,
+    endYear: 2028,
+  },
+  {
+    id: 2,
     title: "AWS Certified Developer - Associate",
     issuer: "Amazon Web Services",
     badge: "/images/dva.webp",
@@ -12,7 +22,7 @@ export const certifications: Certification[] = [
     endYear: 2028,
   },
   {
-    id: 2,
+    id: 3,
     title: "AWS Certified Cloud Practictioner",
     issuer: "Amazon Web Services",
     badge: "/images/ccp.webp",
@@ -22,7 +32,7 @@ export const certifications: Certification[] = [
     endYear: 2028,
   },
   {
-    id: 3,
+    id: 4,
     title: "AWS re/Start Graduate",
     issuer: "Amazon Web Services",
     badge: "/images/graduate.webp",
